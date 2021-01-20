@@ -19,5 +19,6 @@ server:
 
 jwt:
   header: authorization
-  secret: bXktand0LXNlY3JldC1pcy05OTExMTAK  #'my-jwt-secret-is-991110' 을 base64로 인코딩한 값
+  secret: bXktcHJvamVjdC1uYW1lLWlzLWp3dC1sb2dpbi1wYWdlLWFuZC10aGlzLWlzLW15LWp3dC1zZWNyZXQK
+  #'my-project-name-is-jwt-login-page-and-this-is-my-jwt-secret' 을 base64로 인코딩한 값
   token-validity: 10800
