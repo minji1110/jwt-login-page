@@ -10,7 +10,14 @@ spring:
     hibernate:
       ddl-auto: update
       show-ddl: true
-  logging.level:
-    org.hibernate.SQL: debug
-  server:
-    port: 8282
+
+logging.level:
+  org.hibernate.SQL: debug
+
+server:
+  port: 8282
+
+jwt:
+  header: authorization
+  secret: bXktand0LXNlY3JldC1pcy05OTExMTAK  #'my-jwt-secret-is-991110' 을 base64로 인코딩한 값
+  token-validity: 10800
