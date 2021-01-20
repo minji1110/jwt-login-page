@@ -18,17 +18,22 @@
 <div id="formContainer">
     <form
             role="form"
-            action="/login"
+            action="/jwt/login"
             th:object="${UserLoginDto}"
             method="post"
     >
         <div class="form-group">
             <label th:for="userId">ID: </label>
+            <span
+                    class="error"
+                    th:if="${#fields.hasErrors('userId')}"
+                    th:errors="*{userId}"
+            >Error!</span>
             <input
                     type="text"
                     th:field="*{userId}"
-                    class="form-control"
                     placeholder="Enter your ID."
+                    th:class="${#fields.hasErrors('userId')}? 'form-control fieldError' : 'form-control'"
             />
         </div>
 
@@ -42,7 +47,6 @@
             <input
                     type="password"
                     th:field="*{userPassword}"
-                    class="form-control"
                     placeholder="Enter your password."
                     th:class="${#fields.hasErrors('userPassword')}? 'form-control fieldError' : 'form-control'"
             />
