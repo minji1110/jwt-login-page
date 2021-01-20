@@ -3,12 +3,9 @@ package minji.jwtloginpage.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Builder
@@ -32,7 +29,7 @@ public class User {
     @JoinTable(
             name = "user_role",
             joinColumns = {@JoinColumn(name = "id",referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_name",referencedColumnName = "rome_name")})
+            inverseJoinColumns = {@JoinColumn(name = "roleName",referencedColumnName = "roleName")})
     private List<Role> roleList;
 
     @Column
