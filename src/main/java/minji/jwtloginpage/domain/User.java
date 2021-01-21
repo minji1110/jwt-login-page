@@ -1,7 +1,8 @@
-package minji.jwtloginpage.User;
+package minji.jwtloginpage.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Builder
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
@@ -25,14 +27,10 @@ public class User {
     @Column(nullable = false)
     private String userPassword;
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_role",
-            joinColumns = {@JoinColumn(name = "id",referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "roleName",referencedColumnName = "roleName")})
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "roleName")
     private List<Role> roleList;
 
     @Column
     private boolean activated;
-
 }

@@ -1,4 +1,4 @@
-package minji.jwtloginpage.jwt;
+package minji.jwtloginpage.common.jwt;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

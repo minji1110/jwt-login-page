@@ -1,4 +1,4 @@
-package minji.jwtloginpage.jwt;
+package minji.jwtloginpage.common.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

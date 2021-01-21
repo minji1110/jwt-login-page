@@ -1,6 +1,6 @@
 package minji.jwtloginpage.controller;
 
-import minji.jwtloginpage.User.UserLoginDto;
+import minji.jwtloginpage.domain.UserLoginDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

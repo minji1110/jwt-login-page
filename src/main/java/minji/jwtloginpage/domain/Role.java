@@ -1,4 +1,4 @@
-package minji.jwtloginpage.User;
+package minji.jwtloginpage.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

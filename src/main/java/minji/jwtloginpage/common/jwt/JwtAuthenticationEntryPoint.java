@@ -1,4 +1,4 @@
-package minji.jwtloginpage.jwt;
+package minji.jwtloginpage.common.jwt;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

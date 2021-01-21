@@ -1,10 +1,9 @@
-package minji.jwtloginpage.config;
+package minji.jwtloginpage.common.config;
 
 import lombok.RequiredArgsConstructor;
-import minji.jwtloginpage.jwt.JwtAccessDeniedHandler;
-import minji.jwtloginpage.jwt.JwtAuthenticationEntryPoint;
-import minji.jwtloginpage.jwt.JwtSecurityConfig;
-import minji.jwtloginpage.jwt.TokenProvider;
+import minji.jwtloginpage.common.jwt.JwtAccessDeniedHandler;
+import minji.jwtloginpage.common.jwt.JwtAuthenticationEntryPoint;
+import minji.jwtloginpage.common.jwt.JwtSecurityConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -18,7 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity  //기본적인 웹 보완을 설정하도록 함
 @EnableGlobalMethodSecurity(prePostEnabled = true)  //@PreAuthorize 어노테이션을 메소드단위로 추가하기 위함
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    private final TokenProvider tokenProvider;
     private final JwtSecurityConfig jwtSecurityConfig;
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     private final JwtAccessDeniedHandler jwtAccessDeniedHandler;

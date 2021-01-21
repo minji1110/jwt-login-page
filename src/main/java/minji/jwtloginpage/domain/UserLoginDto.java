@@ -1,9 +1,8 @@
-package minji.jwtloginpage.User;
+package minji.jwtloginpage.domain;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 @Data
 public class UserLoginDto {
