@@ -42,9 +42,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .authorizeRequests()
-                .antMatchers("/jwt").permitAll()    //이 주소는 모두에게 허용
-                .antMatchers("/jwt/login").permitAll()
-                .antMatchers("/jwt/signup").permitAll()
+                .antMatchers("/web").permitAll()    //이 주소는 모두에게 허용
+                .antMatchers("/**/login").permitAll()
+                .antMatchers("/**/signup").permitAll()
                 .anyRequest().authenticated()                  //나머지는 인증거치도록
 
                 .and()

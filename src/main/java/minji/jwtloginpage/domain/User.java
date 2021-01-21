@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Builder
@@ -27,9 +26,9 @@ public class User {
     @Column(nullable = false)
     private String userPassword;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "roleName")
-    private List<Role> roleList;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Role userRole;
 
     @Column
     private boolean activated;
